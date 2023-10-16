@@ -22,11 +22,12 @@ CROSSMINT_PROJECT_ID=
 CROSSMINT_CLIENT_SECRET=
 
 NEXT_PUBLIC_FIREBASE_API_KEY=
+FIREBASE_PROJECT_ID=
+FIREBASE_PRIVATE_KEY=
+FIREBASE_CLIENT_EMAIL=
 ```
 
-Create a firebaseCreds.json file in root directory and save your service account credentials in it. 
-
-Guide: https://firebase.google.com/docs/admin/setup
+Guide to obtain firebase service credentials: https://firebase.google.com/docs/admin/setup
 
 3. Start the dev server
 
