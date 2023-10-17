@@ -2,6 +2,13 @@ import { callCrossmintAPI } from '@/app/utils/crossmint';
 import { NextRequest, NextResponse } from 'next/server';
 import admin from '@/app/utils/firebase';
 
+// required for CORS
+export async function OPTIONS(req: NextRequest, res: NextResponse) {  
+  return NextResponse.json(
+    { status: 200 }
+  )
+}
+
 export async function POST(req: NextRequest, res: NextResponse) {  
   try {
     const token = req.headers.get('authorization');
