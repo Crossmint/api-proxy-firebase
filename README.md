@@ -29,6 +29,8 @@ FIREBASE_CLIENT_EMAIL=
 
 Guide to obtain firebase service credentials: https://firebase.google.com/docs/admin/setup
 
+You'll need to generate a PEM Private Key from firebase settings -> service accounts -> generate new private key
+
 3. Start the dev server
 
 ```bash
@@ -55,3 +57,14 @@ https://app.getpostman.com/join-team?invite_code=c566f392309c4ea30e61c717004632a
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Testing on deployed instance
+
+Once deployed you will need to add an authorized domain to your firebase project if you want to use the test token generator. This can be found on the root page of the deployed app in a browser. For example, `https://api-proxy-firebase.vercel.app/`. On this page you can click the "Sign in with Google" button to get a JWT for testing out the API. To add the authorized domain do the following:
+
+- Go to the Firebase console for your project.
+- In the left sidebar, click on the "Authentication" option.
+  - If you don't see it, expand the "Build" accordian
+- Click on the "Settings" tab.
+- Scroll down to the "Authorized domains" section and add your domain.
+- Save the changes.
